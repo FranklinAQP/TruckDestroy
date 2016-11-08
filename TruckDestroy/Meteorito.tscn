@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://Meteorito.gd" type="Script" id=1]
+[ext_resource path="res://meteorito.png" type="Texture" id=2]
+[ext_resource path="res://meteoritob.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ) ], "loop":true, "name":"default", "speed":5.0 } ]
+
+[sub_resource type="Animation" id=3]
+
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:animation")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray(  ), "transitions":FloatArray(  ), "update":1, "values":[  ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:frame")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.5 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 0, 1 ] }
+
+[node name="Meteorito" type="Area2D"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.06324, 0, 0, 2.00697, -0.504953, -2.19727 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 1 )
+
+[node name="sprite" type="AnimatedSprite" parent="."]
+
+frames = SubResource( 2 )
+animation = "default"
+
+[node name="animacion" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/anim1 = SubResource( 3 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "anim1"
+
+[node name="shape" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( -0.504953, -2.19727 )
+transform/scale = Vector2( 2.06324, 2.00697 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="area_enter" from="." to="." method="_on_Meteorito_area_enter"]
+
+

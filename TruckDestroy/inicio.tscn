@@ -1,0 +1,134 @@
+[gd_scene load_steps=8 format=1]
+
+[ext_resource path="res://enter.png" type="Texture" id=1]
+[ext_resource path="res://meteorito.png" type="Texture" id=2]
+[ext_resource path="res://button.png" type="Texture" id=3]
+[ext_resource path="res://button_pressed.png" type="Texture" id=4]
+[ext_resource path="res://inicio.gd" type="Script" id=5]
+[ext_resource path="res://freesans..fnt" type="BitmapFont" id=6]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "anim1"
+length = 2.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("meteorito:rect/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 2 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( -42, 655 ), Vector2( 280, 558 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("meteorito1:rect/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 2 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 48, 803 ), Vector2( 318, 625 ) ] }
+
+[node name="fondo" type="TextureFrame"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1000.0
+margin/bottom = 800.0
+texture = ExtResource( 1 )
+stretch_mode = 0
+
+[node name="meteorito" type="TextureFrame" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -42.0
+margin/top = 655.0
+margin/right = -1.0
+margin/bottom = 700.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="meteorito1" type="TextureFrame" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 48.0
+margin/top = 803.0
+margin/right = 89.0
+margin/bottom = 848.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="start" type="TextureButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 693.0
+margin/top = 579.0
+margin/right = 842.0
+margin/bottom = 653.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 3 )
+textures/pressed = ExtResource( 4 )
+script/script = ExtResource( 5 )
+
+[node name="copyrgiht" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 585.0
+margin/top = 699.0
+margin/right = 853.0
+margin/bottom = 727.0
+custom_fonts/font = ExtResource( 6 )
+text = "@Copyright TruckDestroy 2016"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="explosion" type="Particles2D" parent="."]
+
+transform/pos = Vector2( 233, 663 )
+config/amount = 32
+config/lifetime = 2.0
+params/direction = 0.0
+params/spread = 10.0
+params/linear_velocity = 20.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 9.8
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 1.0
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+
+[node name="animacion" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/anim1 = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "anim1"
+
+[connection signal="pressed" from="start" to="start" method="_on_start_pressed"]
+
+

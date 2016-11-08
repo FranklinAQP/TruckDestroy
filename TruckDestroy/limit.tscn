@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://limit.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 17.0883, 10 )
+
+[node name="limit" type="Area2D"]
+
+transform/pos = Vector2( 486.892, -16.7132 )
+transform/scale = Vector2( 16.2154, 0.477714 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1.82407, 0, 0, 2.26149, 1.23165, 16.0139 )
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 1.23165, 16.0139 )
+transform/scale = Vector2( 1.82407, 2.26149 )
+shape = SubResource( 1 )
+trigger = true
+_update_shape_index = 0
+
+[connection signal="area_enter" from="." to="." method="_on_limit_area_enter"]
+
+

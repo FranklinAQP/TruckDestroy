@@ -1,0 +1,740 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://game.gd" type="Script" id=1]
+[ext_resource path="res://Meteorito.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Nave.tscn" type="PackedScene" id=3]
+[ext_resource path="res://limit.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "anim"
+length = 60.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("enemigos:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 15, 40, 50, 58 ), "transitions":FloatArray( 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 13.6324, -22.1768 ), Vector2( 9.08838, 857.116 ), Vector2( 9.08838, 857.116 ), Vector2( 9.08838, 857.116 ), Vector2( 9.08838, 857.116 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("enemigos2:transform/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 15, 29, 40, 50, 58 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 16.5397, -46.0239 ), Vector2( 21.0839, -57.3843 ), Vector2( 12.7154, 877.102 ), Vector2( 12.7154, 877.102 ), Vector2( 12.7154, 877.102 ), Vector2( 12.7154, 877.102 ) ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("enemigos3:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0, 15, 29, 40, 50, 58 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 1.3605, -23.6324 ), Vector2( -15.3764, -19.8976 ), Vector2( -15.3764, -19.8976 ), Vector2( -4.21835, 967.589 ), Vector2( -4.21835, 967.589 ), Vector2( -4.21835, 967.589 ) ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("enemigos4:transform/pos")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0, 15, 29, 40, 50, 58 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( -57.2258, -94.587 ), Vector2( -57.2258, -94.587 ), Vector2( -57.2258, -94.587 ), Vector2( -57.2258, -94.587 ), Vector2( -51.6467, 951.479 ), Vector2( -51.6467, 951.479 ) ] }
+tracks/4/type = "value"
+tracks/4/path = NodePath("enemigos5:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0, 15, 29, 40, 50, 58 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( -146.26, -35.4571 ), Vector2( -146.26, -35.4571 ), Vector2( -146.26, -35.4571 ), Vector2( -146.26, -35.4571 ), Vector2( -146.26, -35.4571 ), Vector2( -154.859, 1091.51 ) ] }
+
+[node name="game" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="enemigos" type="Node2D" parent="."]
+
+transform/pos = Vector2( 9.08838, 857.116 )
+
+[node name="Meteorito" parent="enemigos" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 60.8839, -19.2988 )
+
+[node name="Meteorito1" parent="enemigos" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 154.643, -22.1494 )
+
+[node name="Meteorito2" parent="enemigos" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 245, -23 )
+
+[node name="Meteorito3" parent="enemigos" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 328.805, -24.7012 )
+
+[node name="Meteorito4" parent="enemigos" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 418.012, -25.7012 )
+
+[node name="Meteorito5" parent="enemigos" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 510.622, -24 )
+
+[node name="Meteorito6" parent="enemigos" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 605.232, -23.8506 )
+
+[node name="Meteorito7" parent="enemigos" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 693.991, -25.5518 )
+
+[node name="Meteorito8" parent="enemigos" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 789.9, -23.7012 )
+
+[node name="Meteorito9" parent="enemigos" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 901.315, -20.8506 )
+
+[node name="Nave" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 389, 567 )
+
+[node name="reloj" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = 751.0
+margin/right = 173.0
+margin/bottom = 785.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="puntaje" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 297.0
+margin/top = 748.0
+margin/right = 452.0
+margin/bottom = 782.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="nivel" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 636.67
+margin/top = 752.459
+margin/right = 771.67
+margin/bottom = 780.459
+text = "NIVEL"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="animacion" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/anim = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "anim"
+
+[node name="animacion5" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="enemigos3" type="Node2D" parent="."]
+
+transform/pos = Vector2( -4.21835, 967.589 )
+
+[node name="Meteorito10 9" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 81.2514, -13.263 )
+
+[node name="Meteorito1010" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 81.2514, -73.263 )
+
+[node name="Meteorito1012" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 81.2514, -128.263 )
+
+[node name="Meteorito10 8" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 175.011, -16.1136 )
+
+[node name="Meteorito109" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 175.011, -76.1136 )
+
+[node name="Meteorito110 7" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 175.011, -131.114 )
+
+[node name="Meteorito10 6" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 265.368, -16.9642 )
+
+[node name="Meteorito107" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 265.368, -76.9642 )
+
+[node name="Meteorito110 2" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 265.368, -131.964 )
+
+[node name="Meteorito10 2" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 349.172, -18.6655 )
+
+[node name="Meteorito103" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 349.172, -78.6655 )
+
+[node name="Meteorito110 5" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 349.172, -133.665 )
+
+[node name="Meteorito10 4" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 438.38, -19.6655 )
+
+[node name="Meteorito105" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 438.38, -79.6655 )
+
+[node name="Meteorito110 6" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 438.38, -134.665 )
+
+[node name="Meteorito10 5" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 530.99, -17.9642 )
+
+[node name="Meteorito106" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 530.99, -77.9642 )
+
+[node name="Meteorito110" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 530.99, -132.964 )
+
+[node name="Meteorito10 7" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 625.6, -17.8148 )
+
+[node name="Meteorito108" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 625.6, -77.8148 )
+
+[node name="Meteorito110 3" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 625.6, -132.815 )
+
+[node name="Meteorito10 3" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 714.359, -19.5161 )
+
+[node name="Meteorito104" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 714.359, -79.5161 )
+
+[node name="Meteorito110 4" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 714.359, -134.516 )
+
+[node name="Meteorito10 10" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 810.268, -17.6655 )
+
+[node name="Meteorito1011" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 810.268, -77.6655 )
+
+[node name="Meteorito1012 2" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 810.268, -132.665 )
+
+[node name="Meteorito10" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 921.682, -14.8148 )
+
+[node name="Meteorito11" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 921.682, -74.8148 )
+
+[node name="Meteorito12" parent="enemigos3" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 921.682, -129.815 )
+
+[node name="enemigos4" type="Node2D" parent="."]
+
+transform/pos = Vector2( -51.6467, 951.479 )
+
+[node name="Meteorito10 9" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 134.014, 50.8394 )
+
+[node name="Meteorito1010" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 134.014, -5.16058 )
+
+[node name="Meteorito1012" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 134.014, -60.1606 )
+
+[node name="Meteorito1013" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 134.014, -116.161 )
+
+[node name="Meteorito10 8" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 227.773, 47.9888 )
+
+[node name="Meteorito109" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 227.773, -8.01123 )
+
+[node name="Meteorito110 4" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 227.773, -63.0112 )
+
+[node name="Meteorito1105" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 227.773, -119.011 )
+
+[node name="Meteorito10 6" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 318.13, 47.1382 )
+
+[node name="Meteorito107" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 318.13, -8.86182 )
+
+[node name="Meteorito110 2" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 318.13, -63.8618 )
+
+[node name="Meteorito1103" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 318.13, -119.862 )
+
+[node name="Meteorito10 2" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 401.935, 45.437 )
+
+[node name="Meteorito103" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 401.935, -10.563 )
+
+[node name="Meteorito110 5" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 401.935, -65.563 )
+
+[node name="Meteorito1106" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 401.935, -121.563 )
+
+[node name="Meteorito10 4" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 491.143, 44.437 )
+
+[node name="Meteorito105" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 491.143, -11.563 )
+
+[node name="Meteorito110 7" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 491.143, -66.563 )
+
+[node name="Meteorito1108" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 491.143, -122.563 )
+
+[node name="Meteorito10 5" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 583.752, 46.1382 )
+
+[node name="Meteorito106" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 583.752, -9.86182 )
+
+[node name="Meteorito110" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 583.752, -64.8618 )
+
+[node name="Meteorito111" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 583.752, -120.862 )
+
+[node name="Meteorito10 7" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 678.362, 46.2876 )
+
+[node name="Meteorito108" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 678.362, -9.7124 )
+
+[node name="Meteorito110 3" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 678.362, -64.7124 )
+
+[node name="Meteorito1104" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 678.362, -120.712 )
+
+[node name="Meteorito10 3" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 767.122, 44.5863 )
+
+[node name="Meteorito104" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 767.122, -11.4137 )
+
+[node name="Meteorito110 6" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 767.122, -66.4137 )
+
+[node name="Meteorito1107" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 767.122, -122.414 )
+
+[node name="Meteorito10 10" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 863.03, 46.437 )
+
+[node name="Meteorito1011" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 863.03, -9.56305 )
+
+[node name="Meteorito1012 2" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 863.03, -64.563 )
+
+[node name="Meteorito10123" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 863.03, -120.563 )
+
+[node name="Meteorito10" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 974.445, 49.2876 )
+
+[node name="Meteorito11" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 974.445, -6.7124 )
+
+[node name="Meteorito12" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 974.445, -61.7124 )
+
+[node name="Meteorito13" parent="enemigos4" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 974.445, -117.712 )
+
+[node name="enemigos5" type="Node2D" parent="."]
+
+transform/pos = Vector2( -154.859, 1091.51 )
+
+[node name="Meteorito10 9" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 229.865, -3.85632 )
+
+[node name="Meteorito1010" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 227.593, -67.4744 )
+
+[node name="Meteorito1012" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 227.593, -133.365 )
+
+[node name="Meteorito1013" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 229.865, -196.983 )
+
+[node name="Meteorito1014" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 229.865, -258.329 )
+
+[node name="Meteorito10 8" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 323.624, -6.70697 )
+
+[node name="Meteorito109" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 321.352, -70.325 )
+
+[node name="Meteorito110 4" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 321.352, -136.215 )
+
+[node name="Meteorito1105" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 323.624, -199.833 )
+
+[node name="Meteorito1109" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 323.624, -261.179 )
+
+[node name="Meteorito10 6" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 413.981, -7.55756 )
+
+[node name="Meteorito107" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 411.709, -71.1756 )
+
+[node name="Meteorito110 7" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 411.709, -137.066 )
+
+[node name="Meteorito1108" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 413.981, -200.684 )
+
+[node name="Meteorito1109 3" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 413.981, -262.03 )
+
+[node name="Meteorito10 2" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 497.786, -9.25879 )
+
+[node name="Meteorito103" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 495.514, -72.8769 )
+
+[node name="Meteorito110 3" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 495.514, -138.767 )
+
+[node name="Meteorito1104" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 497.786, -202.385 )
+
+[node name="Meteorito1109 4" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 497.786, -263.731 )
+
+[node name="Meteorito10 4" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 586.994, -10.2588 )
+
+[node name="Meteorito105" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 584.721, -73.8769 )
+
+[node name="Meteorito110 2" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 584.721, -139.767 )
+
+[node name="Meteorito1103" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 586.994, -203.385 )
+
+[node name="Meteorito1109 2" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 586.994, -264.731 )
+
+[node name="Meteorito10 5" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 679.603, -8.55756 )
+
+[node name="Meteorito106" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 677.331, -72.1756 )
+
+[node name="Meteorito110 5" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 677.331, -138.066 )
+
+[node name="Meteorito1106" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 679.603, -201.684 )
+
+[node name="Meteorito1109 6" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 679.603, -263.03 )
+
+[node name="Meteorito10 7" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 774.213, -8.40814 )
+
+[node name="Meteorito108" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 771.941, -72.0262 )
+
+[node name="Meteorito110" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 771.941, -137.916 )
+
+[node name="Meteorito111" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 774.213, -201.534 )
+
+[node name="Meteorito112" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 774.213, -262.88 )
+
+[node name="Meteorito10 3" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 862.973, -10.1094 )
+
+[node name="Meteorito104" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 860.7, -73.7275 )
+
+[node name="Meteorito110 6" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 860.7, -139.618 )
+
+[node name="Meteorito1107" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 862.973, -203.236 )
+
+[node name="Meteorito1109 5" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 862.973, -264.582 )
+
+[node name="Meteorito10 10" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 958.881, -8.25879 )
+
+[node name="Meteorito1011" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 956.609, -71.8769 )
+
+[node name="Meteorito1012 2" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 956.609, -137.767 )
+
+[node name="Meteorito10123" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 958.881, -201.385 )
+
+[node name="Meteorito10124" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 958.881, -262.731 )
+
+[node name="Meteorito10" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 1070.3, -5.40814 )
+
+[node name="Meteorito11" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 1068.02, -69.0262 )
+
+[node name="Meteorito12" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 1068.02, -134.916 )
+
+[node name="Meteorito13" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 1070.3, -198.534 )
+
+[node name="Meteorito14" parent="enemigos5" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 1070.3, -259.88 )
+
+[node name="enemigos2" type="Node2D" parent="."]
+
+transform/pos = Vector2( 12.7154, 877.102 )
+
+[node name="Meteorito10 9" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 62.5207, -40.8931 )
+
+[node name="Meteorito1010" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 62.5207, 15.9087 )
+
+[node name="Meteorito10 8" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 156.28, -43.7438 )
+
+[node name="Meteorito109" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 156.28, 13.058 )
+
+[node name="Meteorito10 6" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 246.637, -44.5944 )
+
+[node name="Meteorito107" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 246.637, 12.2075 )
+
+[node name="Meteorito10 2" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 330.442, -46.2956 )
+
+[node name="Meteorito103" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 330.442, 10.5062 )
+
+[node name="Meteorito10 4" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 419.649, -47.2956 )
+
+[node name="Meteorito105" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 419.649, 9.50623 )
+
+[node name="Meteorito10 5" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 512.259, -45.5944 )
+
+[node name="Meteorito106" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 512.259, 11.2075 )
+
+[node name="Meteorito10 7" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 606.869, -45.4449 )
+
+[node name="Meteorito108" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 606.869, 11.3569 )
+
+[node name="Meteorito10 3" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 695.628, -47.1462 )
+
+[node name="Meteorito104" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 695.628, 9.65558 )
+
+[node name="Meteorito10 10" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 791.537, -45.2956 )
+
+[node name="Meteorito1011" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 791.537, 11.5062 )
+
+[node name="Meteorito10" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 902.952, -42.4449 )
+
+[node name="Meteorito11" parent="enemigos2" instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 902.952, 14.3569 )
+
+[node name="limit" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 483.011, -18.5062 )
+
+[connection signal="area_enter" from="enemigos/Meteorito" to="enemigos/Meteorito/sprite" method="_on_Meteorito_area_enter"]
+
+[connection signal="area_enter" from="limit" to="limit/CollisionShape2D" method="_on_limit_area_enter"]
+
+
