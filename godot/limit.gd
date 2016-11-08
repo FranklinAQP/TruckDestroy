@@ -13,6 +13,6 @@ func _ready():
 
 func _on_limit_area_enter(area):
 	print(area.get_name())
-	if(area.get_groups().find("shoot")!=-1):
+	if(area.get_groups().find("shoott")!=-1):
 		area.queue_free()
 	pass # replace with function bod
