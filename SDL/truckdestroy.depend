@@ -1,0 +1,251 @@
+# depslib dependency file v1.0
+1475512882 source:/home/cs01/Documents/videojuegos/truckdestroy/src/Meteoritos.cpp
+	"Meteoritos.h"
+
+1475512882 /home/cs01/Documents/videojuegos/truckdestroy/include/Meteoritos.h
+
+1475546766 source:/media/csunsamaster/CANDY/videojuegos/truckdestroy/main.cpp
+	<cstdlib>
+	<stdlib.h>
+	"SDL.h"
+	<iostream>
+	"Configuration.h"
+	"Meteorito.h"
+	"SDL_image.h"
+
+1399696797 /usr/include/SDL/SDL.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1399696797 /usr/include/SDL/SDL_platform.h
+
+1399696797 /usr/include/SDL/begin_code.h
+
+1399696797 /usr/include/SDL/close_code.h
+
+1399696797 /usr/include/SDL/SDL_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_keysym.h
+
+1399696797 /usr/include/SDL/SDL_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1399696797 /usr/include/SDL/SDL_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1399696797 /usr/include/SDL/SDL_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1390221300 /usr/include/SDL/SDL_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1475545944 source:/media/csunsamaster/CANDY/videojuegos/truckdestroy/src/Meteorito.cpp
+	"Meteorito.h"
+
+1475545944 /media/csunsamaster/CANDY/videojuegos/truckdestroy/include/Meteorito.h
+
+1475545917 source:/media/csunsamaster/CANDY/videojuegos/truckdestroy/src/Misil.cpp
+	"Misil.h"
+
+1475545916 /media/csunsamaster/CANDY/videojuegos/truckdestroy/include/Misil.h
+
+1475545898 source:/media/csunsamaster/CANDY/videojuegos/truckdestroy/src/Nave.cpp
+	"Nave.h"
+
+1475545898 /media/csunsamaster/CANDY/videojuegos/truckdestroy/include/Nave.h
+
+1475734470 source:/home/csunsamaster/Documents/videogames/truckdestroy/main.cpp
+	<cstdlib>
+	<stdlib.h>
+	"SDL.h"
+	<iostream>
+	"Configuration.h"
+	"Nave.h"
+	"SDL_image.h"
+
+1475573685 /home/csunsamaster/Documents/videogames/truckdestroy/include/Meteorito.h
+
+1475585071 source:/home/csunsamaster/Documents/videogames/truckdestroy/src/Meteorito.cpp
+	"Meteorito.h"
+
+1475731872 source:/home/csunsamaster/Documents/videogames/truckdestroy/src/Misil.cpp
+	"Misil.h"
+
+1475731896 /home/csunsamaster/Documents/videogames/truckdestroy/include/Misil.h
+
+1475733810 source:/home/csunsamaster/Documents/videogames/truckdestroy/src/Nave.cpp
+	"Nave.h"
+
+1475732684 /home/csunsamaster/Documents/videogames/truckdestroy/include/Nave.h
+	"Meteorito.h"
+	"Misil.h"
+	"SDL.h"
+	"Configuration.h"
+	"SDL_image.h"
+	<iostream>
+	<vector>
+
+1475595928 /home/csunsamaster/Documents/videogames/truckdestroy/include/Configuration.h
+	"SDL.h"
+
